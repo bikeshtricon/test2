@@ -1,0 +1,39 @@
+<!-- User Login -->
+<%inherit file="userCentralMaster.html"/>
+<%def name="extraHeader()">
+    <link rel="stylesheet" href="${request.static_url('usercentral:static/css/user_login.css')}" type="text/css" media="screen" charset="utf-8" />
+</%def>
+<div class="mainContainer">
+	% if len(request.params) != 0:
+	<div class="loginMessage"><div class="alert alert-danger alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<div class="messageHeader"><strong>Failure!</strong></div>
+		<b>Please provide valid credentials</b>
+	</div></div>
+	
+	% endif
+	<form class="form-signin" role="form" action="/validate/login" method="POST">
+		<div class="form-signin-header"><p>Welcome to User Central</p></div>
+		<div class="userLoginForm">
+			<div class="formField">
+				<label for="name">Username</label>
+				<input class="form-control get_value" type="text" name="username" autofocus="" placeholder="">
+			</div>
+			<div class="mandatory_field">&nbsp* Please enter user name</div>
+			<div class="formField">
+				<label for="email">Password</label>
+				<input class="form-control get_value" type="password" name="userpassword" placeholder="">
+			</div>
+			<div class="mandatory_field">&nbsp* Please enter password</div>
+			<div class="form_button">
+				<button class="btn btn-primary">Sign in</button>
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me">Remember me
+				</label>
+				<div class="forgotPassword"><a href="/forgotPassword">Forgot password? </a></div>
+			</div>
+		</div>
+		<div class="form-signin-footer"><p>&copy; 2014 Insight Catastrophe Group | Alpha 0.0.1</p></div>
+	</form>
+</div>
+<script src="${request.static_url('usercentral:static/scripts/userLogin.js')}"></script>

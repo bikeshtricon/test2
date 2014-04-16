@@ -1,0 +1,16 @@
+<%inherit file="userCentralMaster.html"/>
+<%def name="extraHeader()">
+</%def>
+<body>
+	<h3 class="title">New User has been added. Please find the details below</h3>
+	<br>
+	User Name: ${request.params['username']}
+	<br>
+	User Email: ${request.params['useremail']}
+	<br>
+	User Type: ${request.params['usertype']}
+	<br>
+	User Carrier Group: ${request.params['usergroup']}
+	<br>
+	User Program: ${request.params['userprogram']}
+</body>

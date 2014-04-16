@@ -1,0 +1,63 @@
+body {
+	padding-top: 70px;
+}
+div.container {
+    width: 100%;
+}
+div.navbar-header div.logo {
+	margin-left: 20px;
+    width: 141px;
+}
+div.navbar-header span.glyphicon-user {
+    color: #888888;
+    float: left;
+    font-size: 20px;
+    margin-top: 12px;
+}
+div.navbar-header a.navbar-brand {
+	margin-left: 3px !important;
+	padding-left: 0;
+}
+ul.navbar-right li.userInfo {
+	padding: 15px 0 0 14px;
+}
+ul.navbar-right li.userInfo p, ul.navbar-right li.userInfo a {
+	color: #5A5A5A;
+	padding-top: 0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgb(136, 136, 136);
+}
+@font-face {
+  	font-family: 'Glyphicons Halflings';
+  	src: url('../glyphicons-halflings-regular.eot');
+  	src: url('../glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+@media (min-width: 768px) {
+	div.navbar-header div.logo {
+		margin-left: 0;
+	}
+	#interstitial .loading {
+		margin: 260px auto;
+	}
+}
+
+#interstitial {
+    background-color: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+#interstitial .loading {
+    background-image: url("../images/loaderTransparent.gif");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 137px;
+    margin: 200px auto;
+    width: 153px;
+}

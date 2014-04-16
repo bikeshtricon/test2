@@ -1,0 +1,104 @@
+.mainContainer {
+	margin-top: 0px;
+	padding: 15px;
+  	width: 100%;
+}
+.form-signin {
+	border: 1px solid #B2E5F0;
+    border-radius: 4px;
+	margin: 0 auto;
+	max-width: 330px;
+}
+.form-signin div.form-signin-header {
+	background-color: #DCECF6;
+    border-bottom: 1px solid #C3E6F0;
+    color: #4987AB;
+    font-size: 21px;
+    margin: 0;
+    padding: 9px 17px 0;
+}
+.form-signin div.userLoginForm {
+	padding: 5px 19px 45px;
+}
+.form-signin div.formField {
+    margin-top: 23px;
+}
+.form-signin div.formField label {
+	font-size: 19px;
+	margin-bottom: 12px;
+}
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin div.formField select {
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+    height: 41px;
+    padding: 6px;
+    width: 100%;
+}
+.form-signin .userLoginForm button {
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-right: 25px;
+}
+.form-signin div.form_button {
+	margin-top: 22px;
+    text-align: left;
+}
+.form-signin div.form_button label.checkbox {
+	display: inline-block;
+	font-weight: normal;
+}
+div.addUserConfirmMessage {
+	font-size: 22px;
+    margin-top: 30px;
+    text-align: center;
+}
+div.loginMessage {
+	margin: 0 auto;
+    max-width: 330px;
+}
+@media (min-width: 768px) {
+	.mainContainer {
+		margin-top: 50px;
+  	}
+  	.form-signin {
+		max-width: 625px;
+  	}
+  	.form-control {
+  		width: 80%;
+  	}
+  	.form-signin .userLoginForm button {
+  		padding: 8px 14px;
+  	}
+  	.form-signin .userLoginForm .form_button label.checkbox {
+    	margin-right: 65px;
+	}
+	.form-signin .forgotPassword {
+		display: inline-block;
+		padding: 10px;
+	}
+	div.loginMessage {
+		max-width: 625px;
+	}
+}
+.mandatory_field {
+	color: #E00000;
+	display: none;
+}
+div.form-signin-footer {
+	background-color: #F3F3F3;
+    border-top: 1px solid #CCCCCC;
+    padding: 10px 16px 1px;
+}

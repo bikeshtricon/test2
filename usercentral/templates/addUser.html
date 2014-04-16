@@ -1,0 +1,57 @@
+<%inherit file="userCentralMaster.html"/>
+<%def name="extraHeader()">
+    <link rel="stylesheet" href="${request.static_url('usercentral:static/css/add_user.css')}" type="text/css" media="screen" charset="utf-8" />
+</%def>
+
+<div class="mainContainer">
+	<div class="addUserMessageContainer"></div>
+	<form class="form-signin" role="form">
+		<h2 class="form-signin-heading">Create a User</h2>
+		<div class="addUserForm">
+			<div class="formField">
+				<label for="name">Name</label>
+				<input class="form-control get_value" type="text" name="username" autofocus="" placeholder="">
+			</div>
+			<div class="mandatory_field">&nbsp* Please enter user name</div>
+			<div class="formField">
+				<label for="email">Email</label>
+				<input class="form-control get_value" type="text" name="useremail" placeholder="">
+			</div>
+			<div class="mandatory_field">&nbsp* Please enter valid user email Id</div>
+			<div class="formField radiobutton">
+				<label for="type">UserType</label>
+				<div class="addUserType">
+					<input type="radio" name="usertype" value="underwriter" checked>&nbsp Underwriter &nbsp
+					<input type="radio" name="usertype" value="costumerservice">&nbsp Costumer Service &nbsp
+					<input type="radio" name="usertype" value="carrieruser">&nbsp Carrier User
+				</div>
+			</div>
+			<div class="formField selectBox">
+				<label for="program">Program</label>
+				<select name="userprogram" class="get_value">
+					<option value="" selected="">Select Program</option>
+					% for programKey,programValue in userProgram:
+		 					<option value="${programKey}">${programValue}</option>
+					% endfor
+				</select>
+			</div>
+			<div class="mandatory_field">&nbsp* Please select a program</div>
+			<div class="userCarrierGroup formField selectBox">
+				<label for="group">Carrier Group</label>
+				<select name="usergroup" class="get_value">
+					<option value="" selected="">Select Group</option>
+					% for groupKey,groupValue in carrierGroup:
+		 					<option value="${groupKey}">${groupValue}</option>
+					% endfor
+				</select>
+			</div>
+			<div class="mandatory_field">&nbsp* Please select a group</div>
+			<div class="form_button">
+				<button class="btn addFormReset" type="reset" value="Reset">Reset</button>
+				<button class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script src="${request.static_url('usercentral:static/scripts/addUser.js')}"></script>
